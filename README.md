@@ -1,26 +1,78 @@
 # ai-engineering-cognition-layer
 
-# AI Engineering Cognition Layer (Reference Implementation)
+# AI Engineering Cognition Layer – Reference Implementation
 
-This repo is a reference implementation of two practical patterns for using AI in software delivery:
+This repository is a reference implementation of two practical, production-minded patterns for using AI to improve engineering delivery in complex systems:
 
-1) Cursor + Claude as a constrained cognition layer (planning, discovery, review preparation)
-2) GitHub Copilot as a discipline amplifier (boilerplate acceleration + deterministic CI enforcement)
+1. **Cursor + Claude as a constrained engineering cognition layer**
+2. **GitHub Copilot as a structured productivity and discipline amplifier**
 
-The goal is measurable delivery improvement without sacrificing quality, auditability, or safety.
+This is **not** a demo of “AI writing code.”
+This is a demonstration of how AI can be embedded into **engineering workflows with guardrails, metrics, and accountability**, so improvements show up in lead time, PR quality, and incident trends — not just developer sentiment.
 
-## Architecture at a glance
-- Golden path prompts + strict schemas
-- Retrieval over internal standards/runbooks (mocked in this repo)
-- Deterministic CI gates (tests/logging/risky areas)
-- Optional AI reviewer comments ONLY when citing internal standards
-- Prompt/output logging + redaction + repo allowlists
+---
 
-## Demos
-- Case 1: Ticket → Plan → Patch (schema enforced)
-- Case 1: Explain system (RAG citations)
-- Case 1: Fix failing CI job (minimal safe patch)
-- Case 2: Copilot scaffolds code; CI enforces standards
+## Why this exists
 
-## Metrics (sample)
-See `sample-data/metrics_before_after.csv`.
+Modern engineering teams don’t fail because they lack talent.
+They fail because systems accumulate **cognitive debt**:
+
+- Domain logic spreads across services, configs, and tribal knowledge
+- Senior engineers become human compilers and reviewers
+- PRs bounce for structural reasons (tests, logging, conventions)
+- Onboarding depends on who you can ask, not what’s documented
+
+AI can help — but only when treated as **part of a system**, not a free-form autocomplete toy.
+
+This repo shows how.
+
+---
+
+## Two patterns demonstrated
+
+### Case 1: Cursor + Claude as an Engineering Cognition Layer
+
+**Goal:** Reduce planning, discovery, and review friction  
+**Approach:**  
+- Strict prompt workflows with enforced schemas
+- Retrieval over internal standards and runbooks (mocked here)
+- CI + PR integration that cites policy, not opinion
+- Governance: redaction, allowlists, logging, model fallback
+
+Cursor is treated as an **interaction surface**, not an authority.
+Deterministic systems remain in control.
+
+📁 See: `case-studies/case-1-cursor-claude-cognition-layer/`
+
+---
+
+### Case 2: GitHub Copilot as a Discipline Amplifier
+
+**Goal:** Reduce repetitive engineering work and improve consistency  
+**Approach:**  
+- Heavy use of repo templates and examples
+- Copilot assists with boilerplate, tests, logging
+- CI enforces standards deterministically
+- Metrics drive iteration
+
+Copilot accelerates execution **after standards already exist**.
+It does not replace engineering judgment.
+
+📁 See: `case-studies/case-2-copilot-discipline-amplifier/`
+
+---
+
+## Architecture (high level)
+
+```text
+Engineer
+  ↓
+IDE (Cursor) or GitHub (Copilot)
+  ↓
+Opinionated templates + schemas
+  ↓
+Deterministic CI gates
+  ↓
+Optional AI explanations (policy-cited only)
+  ↓
+Measured delivery + quality outcomes

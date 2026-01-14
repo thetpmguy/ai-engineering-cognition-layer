@@ -4,7 +4,7 @@
 
 This repository is a reference implementation of two practical, production-minded patterns for using AI to improve engineering delivery in complex systems:
 
-1. **Cursor + Claude as a constrained engineering cognition layer**
+1. **VScode + Claude as a constrained engineering cognition layer**
 2. **GitHub Copilot as a structured productivity and discipline amplifier**
 
 This is **not** a demo of “AI writing code.”
@@ -30,7 +30,7 @@ This repo shows how.
 
 ## Two patterns demonstrated
 
-### Case 1: Cursor + Claude as an Engineering Cognition Layer
+### Case 1: VScode + Claude as an Engineering Cognition Layer
 
 **Goal:** Reduce planning, discovery, and review friction  
 **Approach:**  
@@ -39,10 +39,10 @@ This repo shows how.
 - CI + PR integration that cites policy, not opinion
 - Governance: redaction, allowlists, logging, model fallback
 
-Cursor is treated as an **interaction surface**, not an authority.
+VScode is treated as an **interaction surface**, not an authority.
 Deterministic systems remain in control.
 
-📁 See: `case-studies/case-1-cursor-claude-cognition-layer/`
+📁 See: `case-studies/case-1-VScode-claude-cognition-layer/`
 
 ---
 
@@ -67,7 +67,7 @@ It does not replace engineering judgment.
 ```text
 Engineer
   ↓
-IDE (Cursor) or GitHub (Copilot)
+IDE (VScode) or GitHub (Copilot)
   ↓
 Opinionated templates + schemas
   ↓
